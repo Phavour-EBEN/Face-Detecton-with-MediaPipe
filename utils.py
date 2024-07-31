@@ -90,6 +90,7 @@ def rect_corners(
         [[x + w, (y + h) - h // DIV], [x + w, y + h], [(x + w) - w // DIV, y + h]],
         dtype=np.int32,
     )
+    
     if draw_overlay:
         overlay = image.copy()  # coping the image
         cv.rectangle(overlay, rect_points, color, -1)
