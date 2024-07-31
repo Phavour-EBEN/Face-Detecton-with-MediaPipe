@@ -31,7 +31,7 @@ with mp_face_detection.FaceDetection(min_detection_confidence=0.5) as face_detec
                     face.location_data.relative_bounding_box.height],
                     [frame_width, frame_height, frame_width, frame_height]
                 ).astype(int)
-            utils.rect_corners(frame, face_react, utils.YELLOW,th=3)
+            utils.rect_corners(frame, face_react, utils.YELLOW,th=2)
             # print(face_reaction)
         fps = frame_counter/(time.time() - start_time)
         utils.text_with_background(frame, f"FPS: {fps:.2f}", (30, 30),font)
